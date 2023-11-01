@@ -17,5 +17,5 @@ parso==0.8.3
 platformdirs==3.11.0
 pylint==3.0.2
 toml==0.10.2
-Werkzeug==3.0.1
+Werkzeug==2.2.2
 wrapt==1.13.3
