@@ -26,7 +26,7 @@ def main():
 
 
     channel.basic_consume(
-        queue=(os.environ.get("VIDEO_QUEUE")), on_message_callback=callback
+        queue=(os.environ["VIDEO_QUEUE"]), on_message_callback=callback
     )
 
     print('waiting for messages')
