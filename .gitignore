@@ -1,3 +1,4 @@
 src/auth/venv
 src/gateway/venv
 src/converter/venv
+.vscode
