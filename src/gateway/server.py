@@ -28,13 +28,15 @@ def login():
 @server.route("/upload", methods=["POST"])
 def upload():
     access, err = validate.token(request)
+    if err:
+        return err, 401
     access = json.loads(access)
     if access["admin"]:
         if len(request.files) != 1:
             return "expected 1 file", 400
         
         for _, f in request.files.items():
-            err = util.upload(f, fs, channel, access) 
+            err = util.upload(f, fs_videos, channel, access) 
 
             if err:
                 return err, 500
